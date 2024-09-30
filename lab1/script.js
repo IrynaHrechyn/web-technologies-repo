@@ -1,5 +1,4 @@
 function triangle(value1, type1, value2, type2) {
-
     const validTypes = ["leg", "hypotenuse", "angle", "adjacent angle", "opposite angle"];
 
     if (!validTypes.includes(type1) || !validTypes.includes(type2)) {
@@ -92,13 +91,14 @@ function triangle(value1, type1, value2, type2) {
 
     const key = `${type1}||${type2}`;
 
+
     if (calculations[key]) {
         const result = calculations[key]();
         if (result) {
             return result;
         } else {
             console.log("Calculation successful.");
-            return "success " + `a = ${a.toFixed(2)}, b = ${b.toFixed(2)}, c = ${c.toFixed(2)}, alpha = ${alpha.toFixed(2)}, beta = ${beta.toFixed(2)}`;;
+            console.log(`success: a = ${a}, b = ${b}, c = ${c}, alpha = ${alpha}, beta = ${beta}`);
         }
     } else {
         console.log("Invalid types or incompatible pair. Please check the instruction and try again.");
@@ -106,13 +106,3 @@ function triangle(value1, type1, value2, type2) {
     }
 }
 
-
-document.getElementById('triangleForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-    const value1 = parseFloat(document.getElementById('value1').value);
-    const type1 = document.getElementById('type1').value;
-    const value2 = parseFloat(document.getElementById('value2').value);
-    const type2 = document.getElementById('type2').value;
-
-    document.getElementById('result').textContent = triangle(value1, type1, value2, type2);
-});
