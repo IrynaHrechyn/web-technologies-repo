@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    overflow: hidden;
+}
+#game-area {
+    position: relative;
+    width: 90%;
+    height: 600px;
+    margin: 20px auto;
+    border: 2px solid black;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+#game-info {
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.square {
+    position: absolute;
+    cursor: pointer;
+}
+#controls.hidden {
+    display: none;
+}
