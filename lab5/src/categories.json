@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "Електроніка", "shortname": "electronics", "notes": "Різноманітна електроніка" },
+  { "id": 2, "name": "Одяг", "shortname": "clothing", "notes": "Модний одяг" },
+  { "id": 3, "name": "Книги", "shortname": "books", "notes": "Кращі книги" }
+]
